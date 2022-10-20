@@ -1,0 +1,22 @@
+using System;
+
+namespace ArchitectArithmetic
+{
+  class Program
+  {
+    public static void Main(string[] args)
+    {
+      double totalArea = Rectangle(2500, 1500) + Triagle(750, 400) + 0.5 * Circle(375);
+      double totalCost = totalArea * 180;
+      Console.WriteLine(Math.Round(totalCost, 2));
+
+      double totalAreaTM = Rectangle(90.5, 90.5) - 4 * Triangle(24, 24);
+      double totalCostTM = totalAreaTM * 180;
+      Console.WriteLine(Math.Round(totalCostTM, 2));
+
+      double totalAreaGMM = Rectangle(180, 106) + Rectangle(284, 264) - Triangle(264, 84);
+      double totalCostGMM = totalAreaGMM * 180;
+      Console.WriteLine(Math.Round(totalCostGMM, 2));
+    }
+  }
+}
